@@ -4,6 +4,7 @@ const requestLogger = require('./requestLogger')
 const app=express()
 
 app.use(requestLogger)
+app.use(express.json())
 app.use('/',router)
 
 app.listen(3000,()=>{
